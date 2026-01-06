@@ -11,6 +11,6 @@ export const anexo = pgTable("anexo", {
 export const anexo_realtion_with_tarefa = relations(anexo, ({ one })=>({
     author: one(tarefa, {
         fields: [anexo.tarefaId],
-        references: [tarefa.id]
+        references: [tarefa.id],
     }),
 }));
